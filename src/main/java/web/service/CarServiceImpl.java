@@ -35,7 +35,7 @@ public class CarServiceImpl implements CarService {
             }
             return carList;
         } else {
-            return getAllCars();
+            return new ArrayList<>();
         }
     }
 }
