@@ -6,7 +6,7 @@
     <title>cars</title>
 </head>
 <body>
-<h1>Список машин</h1>
+<h1>Cars List</h1>
 <table>
     <thead>
     <tr>
@@ -17,7 +17,7 @@
     </thead>
     <tbody>
     <tr th:each = "car : ${carsList}">
-        <td th:text = "${car.getId()}" ></td>
+        <td th:text = "${car.getId() + 1}" ></td>
         <td th:text = "${car.getCarPrice()}" ></td>
         <td th:text = "${car.getCarModel()}" ></td>
     </tr>

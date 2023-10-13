@@ -21,8 +21,12 @@ public class CarsController {
 
     @GetMapping("/cars")
     public String printCars(Model model, @RequestParam(value = "count", required = false) Integer count) {
-        System.out.println(count == null);
-        model.addAttribute("carsList", carServiceImpl.getCars(count));
+        if (count == null) {
+            model.addAttribute("carsList", carServiceImpl.getAllCars());
+        } else {
+            model.addAttribute("carsList", carServiceImpl.getCars(count));
+        }
+        System.out.println(count);
         return "/cars";
     }
 }

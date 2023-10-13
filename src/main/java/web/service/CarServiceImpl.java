@@ -11,7 +11,7 @@ public class CarServiceImpl implements CarService {
     private List<Car> carsList;
     private static int count;
 
-    {
+    CarServiceImpl() {
         carsList  = new ArrayList<>();
         carsList.add(new Car("Lada", 1_000_000, count++));
         carsList.add(new Car("BMW", 5_200_000, count++));
@@ -29,7 +29,7 @@ public class CarServiceImpl implements CarService {
         List<Car> carList = new ArrayList<>();
         System.out.println(count);
 
-        if (count != null && count < 5 && count > 0) {
+        if (count != null && count <= 5 && count > 0) {
             for (int i = 0; i < count; i++) {
                 carList.add(getAllCars().get(i));
             }
