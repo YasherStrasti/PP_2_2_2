@@ -34,6 +34,8 @@ public class CarServiceImpl implements CarService {
                 carList.add(getAllCars().get(i));
             }
             return carList;
+        } else if (count > 5) {
+            return getAllCars();
         } else {
             return new ArrayList<>();
         }

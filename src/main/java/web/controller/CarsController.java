@@ -27,6 +27,7 @@ public class CarsController {
             model.addAttribute("carsList", carServiceImpl.getCars(count));
         }
         System.out.println(count);
+
         return "/cars";
     }
 }
